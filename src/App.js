@@ -6,11 +6,8 @@ export class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            digimons: [
-                { name: "Agumon", id: "a1" },
-                { name: "Gabumon", id: "g1" },
-                { name: "Palmon", id: "p1" }
-            ]
+            digimons: [],
+            searchField: ""
         };
     }
 
@@ -21,11 +18,21 @@ export class App extends React.Component {
     }
 
     render() {
+        const { digimons, searchField } = this.state;
+        const filterDigimons = digimons.filter(digimon =>
+            digimon.name.toLowerCase().includes(searchField.toLowerCase())
+        );
         return (
             <div className="App">
-                <input type="search" placeholder="search robots" />
+                <input
+                    type="search"
+                    placeholder="search robots"
+                    onChange={e =>
+                        this.setState({ searchField: e.target.value })
+                    }
+                />
                 <div>
-                    <CardList digimons={this.state.digimons}></CardList>
+                    <CardList digimons={filterDigimons}></CardList>
                 </div>
             </div>
         );
