@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/robot-cards-react/static/css/main.7e3ce1d1.chunk.css",
+    "main.js": "/robot-cards-react/static/js/main.dd1a706d.chunk.js",
+    "main.js.map": "/robot-cards-react/static/js/main.dd1a706d.chunk.js.map",
+    "runtime-main.js": "/robot-cards-react/static/js/runtime-main.b41435ac.js",
+    "runtime-main.js.map": "/robot-cards-react/static/js/runtime-main.b41435ac.js.map",
+    "static/js/2.fcd9027c.chunk.js": "/robot-cards-react/static/js/2.fcd9027c.chunk.js",
+    "static/js/2.fcd9027c.chunk.js.map": "/robot-cards-react/static/js/2.fcd9027c.chunk.js.map",
+    "index.html": "/robot-cards-react/index.html",
+    "precache-manifest.fee3ec7deb78bc7539df08e5de915938.js": "/robot-cards-react/precache-manifest.fee3ec7deb78bc7539df08e5de915938.js",
+    "service-worker.js": "/robot-cards-react/service-worker.js",
+    "static/css/main.7e3ce1d1.chunk.css.map": "/robot-cards-react/static/css/main.7e3ce1d1.chunk.css.map",
+    "static/js/2.fcd9027c.chunk.js.LICENSE": "/robot-cards-react/static/js/2.fcd9027c.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b41435ac.js",
+    "static/js/2.fcd9027c.chunk.js",
+    "static/css/main.7e3ce1d1.chunk.css",
+    "static/js/main.dd1a706d.chunk.js"
+  ]
+}
