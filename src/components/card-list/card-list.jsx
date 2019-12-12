@@ -4,8 +4,8 @@ import { Card } from "../card/card";
 
 export const CardList = props => (
     <div className="card-list">
-        {props.digimons.map(digimon => (
-            <Card key={digimon.id} digimon={digimon} />
+        {props.robots.map(robot => (
+            <Card key={robot.id} robot={robot} />
         ))}
     </div>
 );

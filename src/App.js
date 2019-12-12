@@ -7,35 +7,38 @@ export class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            digimons: [],
+            robots: [],
             searchField: ""
         };
     }
 
+    handleSearch = e => {
+        this.setState({ searchField: e.target.value });
+    };
+
     componentDidMount() {
         fetch("https://jsonplaceholder.typicode.com/users")
             .then(response => response.json())
-            .then(users => this.setState({ digimons: users }));
+            .then(users => this.setState({ robots: users }));
     }
 
     render() {
-        const { digimons, searchField } = this.state;
-        const filterDigimons = digimons.filter(digimon =>
-            digimon.name.toLowerCase().includes(searchField.toLowerCase())
+        const { robots, searchField } = this.state;
+        const filterRobots = robots.filter(robot =>
+            robot.name.toLowerCase().includes(searchField.toLowerCase())
         );
         return (
             <div className="App">
-                <div>
-                    <SearchBox
-                        placeholder="search robots"
-                        handleChange={e =>
-                            this.setState({
-                                searchField: e.target.value
-                            })
-                        }
-                    ></SearchBox>
-                    <CardList digimons={filterDigimons}></CardList>
-                </div>
+                <h1>Robot Cards</h1>
+                <SearchBox
+                    placeholder="search robots"
+                    handleChange={this.handleSearch}
+                ></SearchBox>
+                <br /> <br />
+                <CardList robots={filterRobots}></CardList>
+                <br /> <br />
+                <footer>Made by Ikhsan Habibi</footer>
+                <br /> <br />
             </div>
         );
     }
